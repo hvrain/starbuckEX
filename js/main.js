@@ -1,20 +1,3 @@
-// class handler of search in header
-const searchEl = document.querySelector("header .sub-menu .search");
-const searchInputEl = searchEl.querySelector("input");
-const searchIconEl = searchEl.querySelector(".material-icons");
-
-searchEl.addEventListener("click", function () {
-  searchInputEl.focus();
-});
-searchInputEl.addEventListener("focus", function () {
-  searchEl.classList.add("focused");
-  searchInputEl.setAttribute("placeholder", "?†µ?•©ê²??ƒ‰");
-});
-searchInputEl.addEventListener("blur", function () {
-  searchEl.classList.remove("focused");
-  searchInputEl.setAttribute("placeholder", "");
-});
-
 // animation handler of badges in header
 // & scroll to top
 const badgeEl = document.querySelector("header .badges");
@@ -128,7 +111,3 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, "show")
     .addTo(new ScrollMagic.Controller());
 });
-
-//this year to copyright.
-const thisYear = document.querySelector(".this-year");
-thisYear.textContent = new Date().getFullYear();
